@@ -1,6 +1,6 @@
 # Awesome-Contract-AI-Model-Training-Fine-Tuning
 
-# Top Contract AI Model Training & Fine-Tuning Ecosystem
+## Top Contract AI Model Training & Fine-Tuning Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Legal Domain Adaptation, Clause Classification & Contract Reasoning Models*  
