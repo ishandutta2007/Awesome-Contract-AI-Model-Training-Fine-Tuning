@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4" />
+    </pattern>
+
+    <!-- Filters -->
+    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+    </filter>
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      letter-spacing: -0.5px;
+      fill: #ffffff;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+    .code-accent {
+      font-family: 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 13px;
+      fill: #38bdf8;
+    }
+
+    /* Ambient animated pulses (background only, non-obtrusive) */
+    @keyframes orb-float-1 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(40px, -25px) scale(1.1); }
+    }
+    @keyframes orb-float-2 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-35px, 20px) scale(1.15); }
+    }
+    @keyframes pulse-wave {
+      0% { stroke-dashoffset: 400; opacity: 0.2; }
+      50% { opacity: 0.8; }
+      100% { stroke-dashoffset: 0; opacity: 0.2; }
+    }
+    @keyframes subtle-fade {
+      0%, 100% { opacity: 0.55; }
+      50% { opacity: 0.85; }
+    }
+
+    .orb-1 {
+      animation: orb-float-1 10s ease-in-out infinite;
+      transform-origin: 200px 100px;
+    }
+    .orb-2 {
+      animation: orb-float-2 12s ease-in-out infinite;
+      transform-origin: 1000px 300px;
+    }
+    .flow-line {
+      stroke-dasharray: 20, 10;
+      animation: pulse-wave 14s linear infinite;
+    }
+    .pulse-glow {
+      animation: subtle-fade 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Deep Cosmic Background -->
+  <rect width="1200" height="420" fill="url(#bg-grad)" />
+
+  <!-- Background Animated Glowing Orbs (Strictly behind all text and cards) -->
+  <g filter="url(#glow-blur)" class="pulse-glow">
+    <circle class="orb-1" cx="220" cy="120" r="140" fill="#4f46e5" opacity="0.35" />
+    <circle class="orb-2" cx="980" cy="280" r="160" fill="#06b6d4" opacity="0.3" />
+    <circle cx="620" cy="380" r="120" fill="#7c3aed" opacity="0.25" />
+  </g>
+
+  <!-- Tech Geometric Grid Layer -->
+  <rect width="1200" height="420" fill="url(#grid)" />
+
+  <!-- Animated Data Connection Stream in Background -->
+  <g class="flow-line" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.4">
+    <path d="M 50 80 Q 300 20 600 70 T 1150 50" />
+    <path d="M 50 360 Q 400 390 750 330 T 1150 370" stroke="#06b6d4" />
+  </g>
+
+  <!-- Foreground Content Container -->
+  <g id="foreground">
+    <!-- Top Decorative Category Tag -->
+    <g transform="translate(80, 52)">
+      <rect width="265" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <circle cx="16" cy="15" r="5" fill="#10b981" />
+      <text x="30" y="20" class="badge-text" fill="#cbd5e1">LEGAL TECH &amp; CONTRACT AI</text>
+    </g>
+
+    <!-- Main Title with Gradient Glow -->
+    <text x="80" y="132" class="title-text">
+      Awesome Contract AI
+    </text>
+    <text x="80" y="178" class="title-text" fill="url(#primary-glow)">
+      Model Training &amp; Fine-Tuning ⚖️ 🤖
+    </text>
+
+    <!-- Subtitle and Description -->
+    <text x="80" y="222" class="subtitle-text">
+      Curated directory of Legal Foundation Models, Clause Classifiers, Multi-Agent RAG,
+    </text>
+    <text x="80" y="250" class="subtitle-text">
+      and Enterprise Contract Intelligence Systems (SaaS &amp; Open-Source).
+    </text>
+
+    <!-- Dynamic Metric & Feature Pills (Carefully placed below text) -->
+    <g transform="translate(80, 290)">
+      <!-- Pill 1: Legal LLMs -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="42" rx="10" fill="url(#card-grad)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6" />
+        <text x="18" y="26" class="badge-text">⚡ Clause Extraction</text>
+      </g>
+
+      <!-- Pill 2: LegalBench & NLI -->
+      <g transform="translate(195, 0)">
+        <rect width="185" height="42" rx="10" fill="url(#card-grad)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.6" />
+        <text x="18" y="26" class="badge-text">📊 LegalBench &amp; NLI</text>
+      </g>
+
+      <!-- Pill 3: Playbook Redlining -->
+      <g transform="translate(395, 0)">
+        <rect width="185" height="42" rx="10" fill="url(#card-grad)" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6" />
+        <text x="18" y="26" class="badge-text">📝 Playbook Redlines</text>
+      </g>
+
+      <!-- Pill 4: SFT & QLoRA -->
+      <g transform="translate(595, 0)">
+        <rect width="180" height="42" rx="10" fill="url(#card-grad)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.6" />
+        <text x="18" y="26" class="badge-text">🎯 SFT &amp; QLoRA Adaptation</text>
+      </g>
+    </g>
+
+    <!-- Right Side Decorative Interactive Card (Contract Analysis Pipeline Mock) -->
+    <g transform="translate(860, 65)">
+      <!-- Card Container -->
+      <rect width="260" height="280" rx="16" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" />
+      <rect width="260" height="36" rx="16" fill="#0f172a" />
+      <!-- Window Controls -->
+      <circle cx="20" cy="18" r="5" fill="#ef4444" />
+      <circle cx="36" cy="18" r="5" fill="#f59e0b" />
+      <circle cx="52" cy="18" r="5" fill="#10b981" />
+      <text x="75" y="22" class="code-accent" font-size="11">contract_model_eval.py</text>
+
+      <!-- Simulated Terminal Code / Flow -->
+      <g transform="translate(18, 56)">
+        <text x="0" y="16" class="code-accent" font-size="12" fill="#94a3b8">&gt; Ingesting: NDA_Master.pdf</text>
+        <rect x="0" y="28" width="224" height="6" rx="3" fill="#1e293b" />
+        <rect x="0" y="28" width="180" height="6" rx="3" fill="#38bdf8">
+          <animate attributeName="width" values="40;180;224;180" dur="6s" repeatCount="indefinite" />
+        </rect>
+
+        <text x="0" y="60" class="code-accent" font-size="12" fill="#cbd5e1">✓ Clause: Indemnification</text>
+        <text x="0" y="80" class="code-accent" font-size="12" fill="#f59e0b">⚠️ Risk Score: High (Cap: $0)</text>
+        <text x="0" y="100" class="code-accent" font-size="12" fill="#cbd5e1">✓ NLI Entailment: Verified</text>
+        <text x="0" y="120" class="code-accent" font-size="12" fill="#34d399">✓ Suggested Redline: Ready</text>
+
+        <path d="M 0 142 L 224 142" stroke="#334155" stroke-width="1" />
+        
+        <text x="0" y="166" class="badge-text" font-size="12" fill="#94a3b8">LegalBench F1 Metric:</text>
+        <text x="0" y="190" class="title-text" font-size="22" fill="#10b981">0.892 (Production)</text>
+      </g>
+    </g>
+
+    <!-- Bottom Framing Border -->
+    <rect x="80" y="360" width="1040" height="2" fill="url(#primary-glow)" opacity="0.8" />
+  </g>
+</svg>
