@@ -24,7 +24,7 @@ A comprehensive guide to domain adaptation for legal foundation models, covering
 - [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
 - [🏢 SaaS & Enterprise Hosted Platforms](#-saas--enterprise-hosted-platforms)
 - [💻 Open-Source Repositories & Models](#-open-source-repositories--models)
-  - [Open-Source Projects Sorted by GitHub Stars](#open-source-projects-sorted-by-github-stars)
+  - [Open-Source Projects Sorted by GitHub_Stars](#open-source-projects-sorted-by-github-stars)
 - [🏗️ Architectural Patterns for Custom Contract AI](#️-architectural-patterns-for-custom-contract-ai)
 - [📈 Star History](#-star-history)
 - [☕ Support & Community](#-support--community)
@@ -72,11 +72,11 @@ Commercial contract intelligence and CLM solutions with AI customization and cop
 
 Curated open-weight foundation models, legal fine-tunes, inference benchmarks, and contract automation suites. 
 
-### Open-Source Projects Sorted by GitHub Stars
+### Open-Source Projects Sorted by GitHub_Stars
 
-All projects below are sorted in **descending order by GitHub star count**. Each badge displays live stars and links directly to the project's stargazers page:
+All projects below are sorted in **descending order by GitHub Stars_Count**. Each badge displays live GitHub_Stars and links directly to the project's stargazers page:
 
-| Repository / Project | Stars Badge | Description | Primary Tech Stack |
+| Repository / Project | Stars_Badge | Description | Primary Tech Stack |
 |:---|:---:|:---|:---|
 | **[HazyResearch/legalbench](https://github.com/HazyResearch/legalbench)** | [![Stars](https://img.shields.io/github/stars/HazyResearch/legalbench?style=social&color=white)](https://github.com/HazyResearch/legalbench/stargazers) | Collaboratively built benchmark for evaluating legal reasoning in LLMs, including contract clause identification, issue spotting, and legal interpretation across 162 tasks. | Python, Benchmarking, Legal NLP |
 | **[The-Atticus-Project/cuad](https://github.com/The-Atticus-Project/cuad)** | [![Stars](https://img.shields.io/github/stars/The-Atticus-Project/cuad?style=social&color=white)](https://github.com/The-Atticus-Project/cuad/stargazers) | The Contract Understanding Atticus Dataset (CUAD) from NeurIPS. Gold standard dataset of 13,000+ annotations across 41 contract categories for fine-tuning legal models. | Python, PyTorch, Hugging Face, SQuAD format |
